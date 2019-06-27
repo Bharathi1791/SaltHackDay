@@ -2,17 +2,20 @@ import React from 'react';
 
 function MovieSearcher(props) {
   return (
+  <div className="search-form">
     <form onSubmit={props.handleSearch}>
-    <label>
-      Enter Movie Name:
-      <input type="text" name="name" id='search' />
+    <label className="input-text">
+      Movie Name
+      <input className="search-text" type="text" name="name" id='search' />
     </label>
-    <label>
-      Enter Movie year:
-      <input type="text" name="year" id='year' />
+   
+    <label className="input-text">
+      Movie Year
+      <input className="date-text"type="text" name="year" id='year' />
     </label>
     <input className='submit' type="submit" value="Submit" />
-  </form>
+    </form>
+  </div>
   );
 }
 

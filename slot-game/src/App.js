@@ -17,10 +17,7 @@ function Game() {
 
 function Movie() {
   return (
-    <div>
-      <h1 className="game-title">Movie Reviews</h1>
       <ReviewMovies />
-    </div>
   );
 }
 
