@@ -64,7 +64,7 @@
 .start-game {
   margin: auto;
   font-family: 'Kaushan Script';  
-  font-size: 1.5em;
+  font-size: 0.8em;
 }
 
 .button-container {
@@ -87,7 +87,7 @@ button {
   animation : glowing 1500ms infinite;
   align-content: center;
   width: 150px;
-  font-size: 0.6em;
+  font-size: 0.8em;
 }
 
 
@@ -112,7 +112,7 @@ button {
   }
   .click-me {
     width: 200px;
-    font-size: 0.6em;
+    font-size: 0.8em;
   }
 }
 
@@ -142,7 +142,7 @@ button {
     animation : glowing 1500ms infinite;
     align-content: center;
     width: 400px;
-    font-size: 0.6em;
+    font-size: 0.8em;
   }
 }
 
@@ -172,7 +172,7 @@ button {
     animation : glowing 1500ms infinite;
     align-content: center;
     width: 400px;
-    font-size: 0.6em;
+    font-size: 0.8em;
   }
   
   .game-board {

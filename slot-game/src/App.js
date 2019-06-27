@@ -27,7 +27,7 @@ const App = () => {
       <BrowserRouter>
       <div className="App">
         <NavBar />
-        <Route exact path="/game" component={Game} />
+        <Route exact path="/" component={Game} />
         <Route path="/movie" component={Movie} />
       </div>
     </BrowserRouter>

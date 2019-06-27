@@ -26,33 +26,29 @@ function SlotBoard(props) {
       <div className="start-game">
         <p>Start game by.....</p>
         <p>Just a little touch on Spin.....</p>
-      </div> 
+      </div>
       :
-      props.playerCoins === 0 ?
-        <div className="start-game">
-          <p>You have won {props.playerScore} coins.....</p>
-          <embed src = {winMusic} width="2" height="0"></embed>
-          <button className='click-me' onClick={props.handleReplayClick}>Play Again!!</button>
-        </div> 
-          :
-          <div className="slot-board">
-            <div className="win-board">{props.playerSpinResult}</div>
-            <div className="image-container">
-              <div><img className="image-slot" src={imageArray[props.image1]} alt="showimage"></img></div>
-              <div><img className="image-slot" src={imageArray[props.image2]} alt="showimage"></img></div>
-              <div><img className="image-slot" src={imageArray[props.image3]} alt="showimage"></img></div>
-          </div>
+      <div className="slot-board">
+        <div className="win-board"> {props.playerCoins === 0 ? `[${props.playerSpinResult}] You have won ${props.playerScore} coins.....` : props.playerSpinResult}</div>
+        <div className="image-container">
+          <div><img className="image-slot" src={imageArray[props.image1]} alt="showimage"></img></div>
+          <div><img className="image-slot" src={imageArray[props.image2]} alt="showimage"></img></div>
+          <div><img className="image-slot" src={imageArray[props.image3]} alt="showimage"></img></div>
         </div>
+      </div>
   );
 }
 
 function SpinBoard(props) {
   return (
-    props.playerCoins === 0 ? <></> : 
-    <div className="button-container">
-      <button onClick={props.handleClick}>Spin</button>
-      <audio id="spinTune"> <source src={buttonMusic}></source></audio>
-    </div>
+    props.playerCoins === 0 ? <div className="button-container">
+      <embed src={winMusic} width="2" height="0"></embed>
+      <button className='click-me' onClick={props.handleReplayClick}>Play Again!!</button>
+    </div> :
+      <div className="button-container">
+        <button onClick={props.handleClick}>Spin</button>
+        <audio id="spinTune"> <source src={buttonMusic}></source></audio>
+      </div>
   );
 }
 
@@ -66,21 +62,21 @@ function Board() {
   const [slot3, setSlot3] = useState(null);
   const [playerScore, setPlayerScore] = useState(0);
   const [playerSpinResult, setPlayerSpinResult] = useState(null);
-  
+
   const handleReplayClick = () => {
-    window.location.reload(true); 
+    window.location.reload(true);
   }
-  
+
   const handleClick = () => {
-  
+
     const slot1 = Math.floor(Math.random() * Math.floor(4));
     const slot2 = Math.floor(Math.random() * Math.floor(4));
     const slot3 = Math.floor(Math.random() * Math.floor(4));
-    
+
     setSlot1(image => slot1);
     setSlot2(image => slot2);
     setSlot3(image => slot3);
-    
+
     if ((slot1 === slot2) && (slot2 === slot3)) {
       setPlayerScore(score => score + 3);
       setPlayerCoins(coins => coins.slice(1));
@@ -94,7 +90,7 @@ function Board() {
       setPlayerCoins(coins => coins.slice(1));
       setPlayerSpinResult(win => 'NO WIN');
     }
-    
+
     let myAudio = document.getElementById('spinTune')
     myAudio.play()
 
@@ -102,18 +98,19 @@ function Board() {
   return (
     <div className='game-board'>
       <ScoreBoard playerCoins={playerCoins} playerScore={playerScore} />
-      
-      <SlotBoard playerCoins={playerCoins.length} 
-        image1={slot1} 
-        image2={slot2} 
+
+      <SlotBoard playerCoins={playerCoins.length}
+        image1={slot1}
+        image2={slot2}
         image3={slot3}
         playerScore={playerScore}
         playerSpinResult={playerSpinResult}
-        handleReplayClick = {handleReplayClick} />
-        
-      <SpinBoard handleClick={handleClick} 
-      playerCoins={playerCoins.length} 
-      playerSpinResult={playerSpinResult} />
+        />
+
+      <SpinBoard handleClick={handleClick}
+        playerCoins={playerCoins.length}
+        playerSpinResult={playerSpinResult} 
+        handleReplayClick={handleReplayClick}/>
     </div>
   );
 }
