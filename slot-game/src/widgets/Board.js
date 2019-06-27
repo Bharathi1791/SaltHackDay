@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import './Board.css';
 import { PlayerScoreBoard, PlayerCoinBoard } from './Score';
 import image0 from '../game-images/Symbol_0.png';
