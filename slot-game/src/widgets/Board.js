@@ -47,6 +47,7 @@ function SlotBoard(props) {
 
 function SpinBoard(props) {
   return (
+    props.playerCoins === 0 ? <></> : 
     <div className="button-container">
       <button onClick={props.handleClick}>Spin</button>
       <audio id="spinTune"> <source src={buttonMusic}></source></audio>
@@ -66,8 +67,7 @@ function Board() {
   const [playerSpinResult, setPlayerSpinResult] = useState(null);
   
   const handleReplayClick = () => {
-  console.log('1111');
-  window.location.reload(true); 
+    window.location.reload(true); 
   }
   
   const handleClick = () => {
@@ -110,7 +110,9 @@ function Board() {
         playerSpinResult={playerSpinResult}
         handleReplayClick = {handleReplayClick} />
         
-      <SpinBoard handleClick={handleClick} playerSpinResult={playerSpinResult} />
+      <SpinBoard handleClick={handleClick} 
+      playerCoins={playerCoins.length} 
+      playerSpinResult={playerSpinResult} />
     </div>
   );
 }
