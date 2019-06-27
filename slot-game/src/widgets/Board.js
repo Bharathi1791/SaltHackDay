@@ -31,7 +31,7 @@ function SlotBoard(props) {
         <div className="start-game">
           <p>You have won {props.playerScore} coins.....</p>
           <embed src = {winMusic} width="2" height="0"></embed>
-          <p><span onClick={props.handleReplayClick}>Click me</span> to play again</p>
+          <button className='click-me' onClick={props.handleReplayClick}>Play Again!!</button>
         </div> 
           :
           <div className="slot-board">
