@@ -82,7 +82,7 @@ button {
 }
 
 .click-me {
-  border-radius: 10px;
+  border-radius: 1;
   animation : glowing 1500ms infinite;
   align-content: center;
   width: 150px;
@@ -103,5 +103,86 @@ button {
       background-color:  rgb(20, 151, 64);
       box-shadow: 0 0 3px rgb(20, 151, 64);
       }
+}
+
+@media screen and (min-width:750px) {
+  .slot-board {
+    height: 200px;
+  }
+  .click-me {
+    width: 200px;
+    font-size: 0.6em;
+  }
+}
+
+@media screen and (min-width:1024px) {
+  
+  .image-container div {
+    border: 2px dashed rgba(128, 0, 0, 0.1);
+    background:
+      linear-gradient(to top, rgb(20, 151, 64), #e60073, 2px, transparent 2px),
+      linear-gradient(to right, rgb(20, 151, 64), #e60073, 2px, transparent 2px),
+      linear-gradient(to bottom, rgb(20, 151, 64), #e60073, 2px, transparent 2px),
+      linear-gradient(to left, rgb(20, 151, 64), #e60073, 2px, transparent 2px);
+    background-origin: border-box;
+    width: 100%;
+    height: 150px;
+   
+  }
+  
+  button {
+    margin-top: 50px;
+    width: 200px;
+    height: 50px;
+  }
+  
+  .click-me {
+    border-radius: 10px;
+    animation : glowing 1500ms infinite;
+    align-content: center;
+    width: 400px;
+    font-size: 0.6em;
+  }
+}
+
+@media screen and (min-width:1200px) {
+  
+  .image-container div {
+    border: 5px dashed rgba(128, 0, 0, 0.1);
+    background:
+      linear-gradient(to top, rgb(20, 151, 64), #e60073, 5px, transparent 5px),
+      linear-gradient(to right, rgb(20, 151, 64), #e60073, 5px, transparent 5px),
+      linear-gradient(to bottom, rgb(20, 151, 64), #e60073, 5px, transparent 5px),
+      linear-gradient(to left, rgb(20, 151, 64), #e60073, 5px, transparent 5px);
+    background-origin: border-box;
+    width: 100%;
+    height: 250px;
+   
+  }
+  
+  button {
+    margin-top: 100px;
+    width: 300px;
+    height: 50px;
+  }
+  
+  .click-me {
+    border-radius: 10px;
+    animation : glowing 1500ms infinite;
+    align-content: center;
+    width: 400px;
+    font-size: 0.6em;
+  }
+  
+  .game-board {
+   
+    border: 20px dashed rgba(128, 0, 0, 0.1);
+    background:
+      linear-gradient(to top, rgb(20, 151, 64), #e60073, 20px, transparent 20px),
+      linear-gradient(to right, rgb(20, 151, 64), #e60073, 20px, transparent 20px),
+      linear-gradient(to bottom, rgb(20, 151, 64), #e60073, 20px, transparent 20px),
+      linear-gradient(to left, rgb(20, 151, 64), #e60073, 20px, transparent 20px);
+    background-origin: border-box;
+  }
 }
 

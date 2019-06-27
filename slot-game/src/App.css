@@ -70,7 +70,7 @@ body {
   }
   
   .game-board {
-    height: 350px;
+    height: 450px;
     width: 80%;
   }
 
@@ -79,16 +79,42 @@ body {
 @media screen and (min-width:1200px) {
   
   body {
-    font-size: 1em;
+    font-size: 2em;
   }
 
   .game-title {
-    font-size: 60px;
+    font-size: 110px;
   }
   
   .game-board {
-    height: 350px;
+    height: 600px;
     width: 80%;
+  }
+  
+  @keyframes game-title {
+    from {
+      text-shadow:
+        0 0 10px #fff,
+        0 0 20px #fff,
+        0 0 30px #e60073,
+        0 0 40px #e60073,
+        0 0 50px #e60073,
+        0 0 60px #e60073,
+        0 0 70px #e60073,
+        0 0 80px #e60073;
+    }
+  
+    to {
+      text-shadow:
+        0 0 10px #fff,
+        0 0 20px #ff4da6,
+        0 0 30px #ff4da6,
+        0 0 40px #ff4da6,
+        0 0 50px #ff4da6,
+        0 0 60px #ff4da6,
+        0 0 70px #ff4da6,
+        0 0 80px #e60073;
+    }
   }
 
 }

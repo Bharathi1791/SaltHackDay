@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Board.css';
 import { PlayerScoreBoard, PlayerCoinBoard } from './Score';
 import image0 from '../game-images/Symbol_0.png';
@@ -9,6 +10,7 @@ import image4 from '../game-images/Symbol_4.png';
 import buttonMusic from '../game-music/button.mp3';
 import winMusic from '../game-music/win.mp3';
 const imageArray = [image0, image1, image2, image3, image4];
+
 
 function ScoreBoard(props) {
   return (
@@ -23,8 +25,8 @@ function SlotBoard(props) {
   return (
     props.playerCoins === 5 ?
       <div className="start-game">
-        <p>You want to start game.....</p>
-        <p>Just a little touch on spin.....</p>
+        <p>Start game by.....</p>
+        <p>Just a little touch on Spin.....</p>
       </div> 
       :
       props.playerCoins === 0 ?
