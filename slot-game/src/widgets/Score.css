@@ -1,0 +1,21 @@
+.coin-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+
+.image-coin {
+  width: 15%;
+  float: right;
+}
+
+.bet-size {
+  float: right;
+  align-content: right;
+}
+
+.win-score {
+  width: 100%;
+}
+
