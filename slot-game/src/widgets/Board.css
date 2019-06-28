@@ -4,7 +4,7 @@
   flex-direction: column;
   justify-content: space-between;
   width: 90%;
-  height: 300px;
+  height: auto;
   margin: auto;
   border: 15px dashed rgba(128, 0, 0, 0.1);
   background:
@@ -185,5 +185,24 @@ button {
       linear-gradient(to left, rgb(20, 151, 64), #e60073, 20px, transparent 20px);
     background-origin: border-box;
   }
+}
+
+@media screen and (min-width:1440px) {
+  .slot-board {
+    height: auto;
+  }
+  
+  .image-container {
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    width: 90%;
+    margin: auto;
+  }
+  
+  .image-container div {
+    height: auto;
+  }
+  
 }
 

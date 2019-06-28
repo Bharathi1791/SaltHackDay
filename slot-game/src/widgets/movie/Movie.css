@@ -115,6 +115,10 @@
   .movie-content {
     font-size: 1em;
   }
+  .search-form {
+    padding: 20px 20px;
+    font-size:1em;
+  }
 
   .show-movie {
     font-size: 0.8em;

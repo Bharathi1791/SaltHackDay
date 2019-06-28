@@ -6,7 +6,7 @@
   flex-wrap: wrap;
   list-style: none;
   font-family: Roboto;
-  margin: 0;
+  margin: auto;
   padding: 0px 0px;
   background-color: rgb(20, 151, 64);
 }
@@ -21,4 +21,10 @@ a {
   color: white;
   text-decoration: none;
   font-family: Roboto;
+}
+
+@media screen and (min-width:1440px) {
+  .nav {
+    width : 100%;
+  } 
 }
