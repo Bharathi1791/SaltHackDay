@@ -26,7 +26,7 @@ function SlotBoard(props) {
     props.playerCoins === 5 ?
       <div className="start-game">
         <p>Start game by.....</p>
-        <p>Just a little touch on Spin.....</p>
+        <p>Just a little touch on Spins.....</p>
       </div>
       :
       <div className="slot-board">
